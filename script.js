@@ -82,7 +82,7 @@ const handleSubmit=async(e)=>{
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response= await fetch('https://open-ai-server-coyj.onrender.com/',{
+    const response= await fetch('https://kind-ruby-greyhound-boot.cyclic.app/',{
       method:'POST',
       headers:{
         'Content-Type':'application/json'
