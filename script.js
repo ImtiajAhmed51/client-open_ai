@@ -51,7 +51,7 @@ function chatStripe(isAi, value, uniqueId) {
                     alt="${isAi ? 'bot' : 'user'}" 
                   />
               </div>
-              <div class="message" id=${uniqueId}>${value+"\nDeveloped by Imtiaj"}</div>
+              <div class="message" id=${uniqueId}>${value}</div>
           </div>
       </div>
   `
@@ -96,7 +96,7 @@ const handleSubmit=async(e)=>{
     if(response.ok){
       const data=await response.json();
       const parseData=data.bot.trim();
-      typeText(messageDiv,parseData);
+      typeText(messageDiv,parseData+"\nDeveloped by Imtiaj");
     }else{
       const err=await response.text();
       messageDiv.innerHTML="Something went wrong";
